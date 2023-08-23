@@ -4,17 +4,43 @@ body, h1, h2, h3, p, ul, li, table {
     padding: 0;
 }
 
+header h1 {
+    color: whitesmoke;
+    font-size: 56px;
+}
+
+header p {
+    color: yellow;
+    font-size: 24px;
+}
+
 /* Basic styling */
 body {
     font-family: Arial, sans-serif;
 }
 
+/* styles.css */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    position: relative; /* Add this to establish a positioning context */
+    background-image: url('logo_hawaii.png'); /* Replace with your image file name */
+    background-size: cover;
+    background-position: center;
+    color: rgba(255, 255, 255, 0.1);
+    padding: 120px;
     text-align: center;
 }
+
+/* Add a semi-transparent overlay */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust the opacity and color as needed */
+}
+
 
 nav {
     background-color: #444;
@@ -48,3 +74,77 @@ footer {
 }
 
 /* Add more specific styling as needed */
+#organizers {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.organizer-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.organizer {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.organizer img {
+    width: 150px; /* Set the desired width for profile pictures */
+    height: 150px; /* Set the desired height for profile pictures */
+    border-radius: 50%; /* Create rounded profile picture */
+    margin-bottom: 10px;
+}
+
+.organizer h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.organizer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#home {
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+
+.home-section {
+    width: 100%;
+    padding: 40px;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    margin: 0; /* Reset margins to remove any default padding */
+}
+
+.home-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+ul li:last-child {
+    margin-bottom: 0;
+}
