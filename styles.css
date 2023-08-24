@@ -34,6 +34,7 @@ header {
 @media (max-width: 768px) {
     header {
         background-image: url('logo_hawaii.png');
+        background-size: 100% auto; 
     }
 }
 
@@ -135,26 +136,7 @@ ul li:last-child {
     margin-bottom: 0;
 }
 
-.mobile-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #333;
-    padding: 10px;
-    color: #fff;
-}
 
-.menu-toggle {
-    display: none; /* Hide toggle on larger screens */
-    cursor: pointer;
-}
-
-.icon {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-}
 
 
 nav {
@@ -177,35 +159,82 @@ nav a {
     text-decoration: none;
 }
 
+.main-nav {
+    display: flex; /* Display horizontally by default */
+    justify-content: flex-end; /* Adjust alignment as needed */
+    background-color: #333;
+    padding: 10px;
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    width: 100%; /* Occupy the full width of the viewport */
+    background-color: #333;
+    padding: 10px;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+}
+
+.icon {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+}
 
 .nav-list {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    display: none; /* Hide list by default */
+    padding: 0;
+}
+
+.nav-list.active {
+    display: block; /* Show list when active */
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex; /* Display list items horizontally */
     margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin-right: 20px; /* Spacing between items */
 }
 
 /* Media query for mobile */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show toggle on smaller screens */
+    .main-nav {
+        flex-direction: row; /* Display horizontally on larger screens */
+        justify-content: flex-start; /* Adjust alignment as needed */
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Display list items vertically */
+    }
+
+    .main-nav li {
+        margin-right: 0; /* Remove spacing between items */
+        margin-bottom: 10px; /* Add vertical spacing between items */
     }
 
     .nav-list {
-        display: none; /* Hide menu list by default */
-        flex-direction: column;
-        background-color: #444;
-        position: absolute;
-        top: 48px;
-        left: 0;
-        width: 100%;
+        display: flex; /* Display list horizontally on larger screens */
     }
 
-    .nav-list.active {
-        display: flex; /* Show menu list when active */
+    .menu-toggle {
+        display: none; /* Hide toggle on larger screens */
     }
 
-    .nav-list li {
-        display: block; /* Show menu items on smaller screens */
-    }
+
 }
