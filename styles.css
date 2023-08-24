@@ -7,15 +7,18 @@ body, h1, h2, h3, p, ul, li, table {
 header h1 {
     color: whitesmoke;
     font-size: 56px;
+    margin-bottom: 10px;
 }
 
 header p {
     color: yellow;
     font-size: 24px;
+    margin-bottom: 0;
 }
 
 /* Basic styling */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
 }
 
@@ -28,13 +31,26 @@ header {
     color: rgba(255, 255, 255, 0.1);
     padding: 120px;
     text-align: center;
+    padding: 50px 0;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Apply different background image for smaller screens */
 @media (max-width: 768px) {
     header {
-        background-image: url('logo_hawaii.png');
-        background-size: 100% auto; 
+        padding: 30px 0;
+    }
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
     }
 }
 
@@ -234,6 +250,13 @@ nav a {
 
     .menu-toggle {
         display: none; /* Hide toggle on larger screens */
+    }
+    .header-content {
+        margin-top: 200px; /* Add margin to avoid overlap with navigation */
+    }
+
+    .main-nav {
+        padding-top: 0px; /* Adjust to create space for navigation */
     }
 
 
