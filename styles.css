@@ -30,6 +30,13 @@ header {
     text-align: center;
 }
 
+/* Apply different background image for smaller screens */
+@media (max-width: 768px) {
+    header {
+        background-image: url('logo_hawaii.png');
+    }
+}
+
 /* Add a semi-transparent overlay */
 header::before {
     content: '';
@@ -40,7 +47,6 @@ header::before {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.1); /* Adjust the opacity and color as needed */
 }
-
 
 nav {
     background-color: #444;
