@@ -22,10 +22,18 @@ body {
     font-family: Arial, sans-serif;
 }
 
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 /* styles.css */
 header {
     position: relative; /* Add this to establish a positioning context */
-    background-image: url('logo_hawaii.png'); /* Replace with your image file name */
+    background-image: url('logo_hawaii_1.png'); /* Replace with your image file name */
     background-size: cover;
     background-position: center;
     color: rgba(255, 255, 255, 0.1);
