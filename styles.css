@@ -21,7 +21,10 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
+p {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
 h3 {
     margin-top: 10px;
     margin-bottom: 10px;
