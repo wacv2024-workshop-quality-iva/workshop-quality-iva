@@ -1,5 +1,25 @@
 .circular--square { border-radius: 50%; }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.time-column {
+    width: 150px; /* Adjust as needed */
+}
+
 /* Reset some default styles */
 body, h1, h2, h3, p, ul, li, table {
     margin: 0;
